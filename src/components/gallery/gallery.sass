@@ -1,0 +1,28 @@
+.gallery
+    margin: 4rem 0
+
+    .gallery-container
+        text-align: center
+
+        h2
+            color: black
+            font-size: 2rem
+            padding-bottom: 1rem
+        
+        .images-container
+            @include flex(column)
+            flex-wrap: wrap
+            @include responsive_md
+                flex-direction: row
+
+            .image-container
+                flex: calc(100% / 2)
+
+                img
+                    display: block
+                    width: 100%
+                    filter: grayscale(100%)
+                    transition: .5s ease
+
+                    &:hover
+                        filter: grayscale(0%)

@@ -1,0 +1,42 @@
+.start-training
+    @include flex(row,center, center)
+    background-color: #222222
+
+    .start-training-container
+        @include flex(column, $align: center)
+        padding: .5rem 1rem
+        @include responsive_md
+            @include flex(row)
+        @include responsive_lg
+            padding: 0 1rem
+        @include responsive_xl
+            width: 1200px
+
+        .info-container
+            flex: 1
+
+            h2
+                font-size: 1.8rem
+
+            p
+                padding: 1rem 0
+                width: 90%
+                font-family: $open
+                line-height: 1.5
+
+            button
+                background-color: $red
+                padding: .8rem 2rem
+                border: none
+                font-size: 1.05rem
+                margin: .5rem 0
+
+        .img-container
+            flex: 1
+            padding-top: 1rem
+            @include responsive_lg
+                padding: 0
+
+            img
+                width: 100%
+                object-fit: cover

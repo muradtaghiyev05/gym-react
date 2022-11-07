@@ -1,0 +1,30 @@
+// utils
+@import './utils/_variables'
+@import './utils/_reset'
+@import './utils/_responsive-mixins'
+@import './utils/_mixins'
+
+// global components
+
+// Components
+@import '../../components/header/header'
+@import '../../components/home/home'
+@import '../../components/about/about'
+@import '../../components/services/services'
+@import '../../components/our-classes/ourClasses'
+@import '../../components/start-training/startTraining'
+@import '../../components/schedule/schedule'
+@import '../../components/gallery/gallery'
+@import '../../components/choose-package/choosePackage'
+@import '../../components/footer/footer'
+
+
+html
+    scroll-behavior: smooth
+
+body
+  &::before
+    content: ''
+    display: block
+    margin-top: 4.4rem
+    

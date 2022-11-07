@@ -1,0 +1,73 @@
+.schedule
+    margin-top: 4rem
+    @include flex(row, center, center)
+
+    .schedule-container
+        @include flex(column)
+        @include responsive_md
+            flex-direction: row
+        @include responsive_xl
+            width: 1200px
+
+        .info-container
+            flex: 1
+            padding: 1rem
+            
+            h2
+                color: black
+                font-size: 1.8rem
+
+            p
+                color: black
+                padding: 1rem 0
+                line-height: 1.6
+                font-family: $open
+
+            .img-container
+
+                img
+                    width: 100%
+                    object-fit: cover
+                    transform: rotateY(180deg)
+        
+        .table-container
+            flex: 1
+            padding: 1rem
+
+            table
+                width: 100%
+                border-collapse: collapse
+
+                tbody
+
+
+                    tr
+                        
+                        td
+                            color: black
+                            border: 1px solid #dfdfdf
+                            padding: .5rem
+                            text-align: center
+
+                        .day
+                            color: white
+                            border: none
+                    
+                        &:nth-child(even)
+                        
+                            .day
+                                background-color: #222222
+                        
+                        &:nth-child(odd)
+                            
+                            .day
+                                background-color: #444444
+                        
+                        &:first-child
+                            
+                            .day
+                                background-color: $red
+
+                        .time
+                            font-weight: 600
+                                
