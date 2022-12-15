@@ -14,7 +14,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project:-
+## About The Project:
 
 ![Home page](https://github.com/muradtaghiyev05/gym-react/blob/main/public/gym-react.jpg "Fitness Club home page")
 
