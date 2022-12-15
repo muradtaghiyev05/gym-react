@@ -1,0 +1,81 @@
+.services
+    background-color: $red
+    padding: 4rem 1rem
+    @include flex(row, center, center)
+
+    .services-container
+        @include flex(column)
+        gap: 2rem
+        @include responsive_md
+            @include flex(row)
+        @include responsive_xl
+            width: 1200px
+
+        .info-container
+            flex: 1
+
+            h2
+                font-size: 2rem
+                padding-bottom: 1rem
+            
+            p
+                font-family: $open
+                font-size: 1.07rem
+                padding: .5rem 0
+                width: 95%
+
+            button
+                background-color: #222222
+                padding: .8rem 2rem
+                border: none
+                font-size: 1.05rem
+                margin: .5rem 0
+        
+        .accordion-container
+            flex: 1
+            @include flex(column)
+            gap: .4rem
+            height: 400px
+            @include responsive_md
+                padding-top: 1rem
+            
+            .accordion-box
+                background-color: rgba(0, 0, 0, 0.2)
+                padding: 1rem
+                @include flex(column)
+                
+
+                .accordion-header
+                    @include flex(row, space-between, center)
+                    cursor: pointer
+                    font-size: .8rem
+                
+                .accordion-body
+                    max-height: 0
+                    overflow: hidden
+                    line-height: 1.7
+                    transition: all .6s cubic-bezier(0, 1, 0, 1)
+                    font-family: $open
+
+            .active
+                background-color: #222222
+                gap: 1rem
+
+                .accordion-header
+                    position: relative
+                    padding-bottom: 1rem
+
+                    &::after
+                        content: ''
+                        background-color: white
+                        width: 100%
+                        height: .8px
+                        opacity: .2
+                        position: absolute
+                        bottom: 0
+                        left: 0
+
+                .accordion-body
+                    height: auto
+                    max-height: 1000px
+                    transition: all .6s cubic-bezier(1, 0, 1, 0)

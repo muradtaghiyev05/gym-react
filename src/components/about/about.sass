@@ -1,0 +1,35 @@
+.about
+    @include flex(row, center, center)
+
+    .about-container
+        padding: 6rem 1rem
+        @include flex(column, center, center)
+        gap: 2rem
+        @include responsive_md
+            flex-direction: row
+        @include responsive_xl
+            width: 1200px
+
+        .card
+            background-color: #222222
+
+            &:nth-child(2)
+                background-color: $red
+
+            .img-container
+                width: 100%
+
+                img
+                    width: 100%
+            
+            .txt-container
+                @include flex(column, center, center)
+                padding: 2rem
+
+                h3
+
+                p
+                    font-family: $open
+                    text-align: center
+                    padding-top: 1rem
+                    line-height: 1.4

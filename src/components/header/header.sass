@@ -1,0 +1,85 @@
+.header
+    background-color: $black
+    position: fixed
+    width: 100%
+    top: 0
+    left: 0
+    z-index: 999
+    @include responsive_xl
+        @include flex(row, center, center)
+
+    .nav
+        position: absolute
+        background-color: $red
+        right: 0
+        top: 0
+        width: 280px
+        height: 100vh
+        @include flex(column, center)
+        transition: .5s ease
+
+        ul
+            @include flex(column, center)
+
+            li
+                cursor: pointer
+                font-size: 2rem
+                display: block
+                
+                a
+                    padding: .5rem 0rem .4rem 1.5rem
+                    position: relative
+                    display: block
+                    transition: .4s ease-in
+                    &:hover, &:active
+                        background-color: rgba(0, 0, 0, 0.2)
+                        
+
+
+    .header-container
+        @include flex(row, space-between, center)
+        @include responsive_xl
+            width: 1200px
+
+        .header-left
+            padding: 0.7rem
+            a
+                @include font(2rem, 500)
+
+            #club
+                color: $red
+        
+        .header-right
+            padding: 0.7rem
+            @include flex(row, $align: center)
+            height: 100%
+            z-index: 1000
+
+            .hamburger
+                @include size(30px, 30px)
+                @include flex(column, space-between, center)
+                padding: .25rem 0
+                cursor: pointer
+
+                .line
+                    @include size(85%, .2rem)
+                    background-color: white
+                    transition: .5s
+            
+            .hamburger-active
+                justify-content: center
+                position: relative
+                .line
+                    &:nth-child(1)
+                        position: absolute
+                        transform: rotate(45deg)
+                        transition: .5s
+                    &:nth-child(2)
+                        opacity: 0
+                        transition: .1s
+                    &:nth-child(3)
+                        position: absolute
+                        transform: rotate(-45deg)
+                        transition: .5s
+                    
+
