@@ -18,7 +18,7 @@
 
 ![Home page](https://github.com/muradtaghiyev05/gym-react/blob/main/public/gym-react.jpg "Fitness Club home page")
 
-Fitness Club is a frontend website.
+Fitness Club is a responsive frontend website.
 
 ### Built With
 
